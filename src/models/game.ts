@@ -10,7 +10,7 @@ export interface Game {
 export const gameSchema = new Schema<Game>({
     title: { type: String, required: true },
     addedAt: { type: Date, default: () => new Date() },
-    addedBy: Schema.Types.ObjectId,
+    addedBy: {type: Schema.Types.ObjectId, ref: 'User'}
   })
 
 export const GameModel = model<Game>('Game', gameSchema)

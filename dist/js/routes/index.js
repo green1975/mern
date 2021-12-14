@@ -7,7 +7,7 @@ const user_1 = require("../controllers/user");
 exports.router = (0, express_1.Router)();
 //Game
 exports.router.post('/games', game_1.createGame);
-exports.router.get('/games/:id', game_1.getGame);
+exports.router.get('/games', game_1.getGame);
 exports.router.get('/games/:id', game_1.getGameById);
 exports.router.put('/games/:id', game_1.putGame);
 exports.router.delete('/games/:id', game_1.deleteGame);

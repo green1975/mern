@@ -5,7 +5,7 @@ import { createUser, getUser, putUser, deleteUser, getUserById } from '../contro
 export const router = Router()
 //Game
 router.post('/games', createGame)
-router.get('/games/:id', getGame)
+router.get('/games', getGame)
 router.get('/games/:id', getGameById)
 router.put('/games/:id', putGame)
 router.delete('/games/:id', deleteGame)
