@@ -36,9 +36,6 @@ export async function getUserById(req: Request, res: Response) {
         let update = {
         ...userToPut.toObject(), ...req.body
     }
-        console.log('testst', update)
-        console.log('user', userToPut)
-        console.log('userBody', req.body)
         let putUser = await UserModel.updateOne({_id: req.params.id}, update)
         console.log('fin')
       res.json(update)
@@ -64,3 +61,4 @@ export async function createUser(req: Request, res: Response) {
 
   res.json(createdUser)
 }
+

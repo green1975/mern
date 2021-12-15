@@ -47,9 +47,6 @@ function putUser(req, res) {
         }
         else {
             let update = Object.assign(Object.assign({}, userToPut.toObject()), req.body);
-            console.log('testst', update);
-            console.log('user', userToPut);
-            console.log('userBody', req.body);
             let putUser = yield user_1.UserModel.updateOne({ _id: req.params.id }, update);
             console.log('fin');
             res.json(update);
